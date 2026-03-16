@@ -1,0 +1,129 @@
+Map Interface (I) (default capacity is 11 and load factor is 0.75)
+	|
+	|
+	\/
+    HashMap(c)  underlying datastructure is HASHTABLE
+	|   Great for searching...
+	|
+	\/
+    HashTable(c)
+
+
+1)When want to store data in key - value pairs
+
+2)one key-value pair is called as Entry
+
+3)Collections of entries are called as map
+
+4)Insertion order is not preserved
+
+5)Null key is allowed but only once 
+
+6)Go for it when more no of search operation
+
+
+=========
+METHODS
+=========
+
+HashMap map = new HashMap()
+
+ 1 map.put(key,value);
+
+ 2 map.putAll(Map collection);
+
+ 3 map.get(key) ==>return corresponding value
+
+ 4 map.remove(key) ==>removes particular entry
+
+  ***
+ 5 map.containsKey(key) ==>returns Boolean
+
+ 6 map.containsValue(value) ==>  returns boolean
+
+ 7 map.isEmpty(); ==>            Boolean
+
+ 8 map.size();  ==>              return size of map
+
+  
+*************************
+Related to Entries
+*************************
+
+9 map.keySet() // returns all the keys(Set<>)
+
+10 map.values() // returns all values from map (Collection)
+
+
+map.entrySet() //returns all entries from map as (Set<>)
+
+================
+Entry Interface (subset of hashmap class)
+=================
+Particular Entry is Respresneted By Entry Interface
+
+
+for(Map.Entry entry:map.entrySet())
+{
+sout(entry.getKey() +" "+entry.getValue());
+
+}
+
+Entry e = map
+
+e ==> reperesenting single Entry
+
+e.getKey()
+
+e.getValue()
+
+e.setValue(Object value)
+
+
+HashMap map1 = new HashMap();
+
+for(Object i:map1.keySet())
+{
+  Sysout(i);
+}
+
+HashMap<Integer,String> map2 = new Hashmap<>();
+
+for(int i:map2.keySet())
+{
+  Sysout(i);
+}
+ 
+===============
+
+key-value pairs
+
+
+for(int i:map2.keySet())
+{
+
+SYSOUT("KEY ==> "+i+" value is ==>"+map2.get(i));
+
+}
+
+	
+==================
+
+
+
+Set s = map.entrySet();
+
+Iterator itr =  s.iterator()
+
+while(itr.hasNext())
+{
+
+    itr.next(); // key - value pair
+
+   Map.entry entry = (Entry) itr.next();
+
+   sysout(entry.getKey+"  "+entry.getValue());
+
+}
+
+}
